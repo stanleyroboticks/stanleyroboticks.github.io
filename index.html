@@ -43,6 +43,41 @@
         margin: 2rem;
       }
 
+      .nav {
+        align-items: center;
+        border-bottom: 0.125rem solid var(--fg-primary);
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+      }
+
+      .nav__logo {
+        transition: transform 0.5s ease;
+      }
+
+      .nav__logo:hover {
+        transform: scale(1.1);
+      }
+
+      .nav__link {
+        color: var(--fg-primary);
+        font-family: var(--font);
+        text-decoration-color: var(--bg);
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 0.125rem;
+        text-underline-offset: 0.3rem;
+        transition:
+          text-decoration-color 0.5s ease,
+          text-underline-offset 0.25s ease;
+        padding-right: 0.25rem;
+      }
+
+      .nav__link:hover {
+        text-decoration-color: var(--fg-primary);
+        text-underline-offset: 0.15rem;
+      }
+
       .header {
         margin: 5rem 0;
       }
@@ -96,6 +131,18 @@
   <body>
     <main class="page">
       <div class="page__wrapper">
+        <nav class="nav">
+          <a class="nav__logo" href="/index.html">
+            <img src="/favicon.svg" width="64" />
+          </a>
+          <a
+            class="nav__link"
+            target="_blank"
+            href="https://github.com/stanleyroboticks"
+          >
+            GitHub
+          </a>
+        </nav>
         <header class="header">
           <h1 class="header__title">Stanley Roboticks</h1>
           <p class="header__tagline">Robotic ticks? Or is it just robotics?</p>
